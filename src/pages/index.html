@@ -144,10 +144,42 @@
       media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
     />
   </head>
-  <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+  <body class="ideator">
+    <header class="header">
+      <h1 class="header__title">
+        Ideator
+      </h1>
+      <p class="header__subtitle">
+        Your place to store ideas
+      </p>
+    </header>
+    <main class="editor">
+      <section class="icons">
+        <img class="icons icons__bold icons__bold--js" src="../assets/icons/Bold.png" alt="Bold"/>
+        <img class="icons icons__italic icons__italic--js" src="../assets/icons/Italic.png" alt="Italic"/>
+      </section>
+      <form class="form">
+          <p class="form__area">
+            <textarea class="form__input form__input--js" id="textarea" name="textarea" placeholder="Type your ideas here"></textarea>
+            <label class="form__label" for="textarea" >
+              Click load to discover your previous ideas. Click save to remember the new ones.
+            </label>
+           </p>
+      </form>
+      <section class="buttons">
+        <button class="button button__load button__load--js">
+          Load
+        </button>
+        <button class="button button__save button__save--js">
+          Save
+        </button>
+      </section>
+  
+    </main>
+  
+  <footer class="footer">
+   <p>All rights reserved. Created 06.2020 by Krysia</p>
+  </footer>
+
   </body>
 </html>
