@@ -8,31 +8,53 @@ body {
   display: grid;
   align-items: center;
   justify-content: center;
-  grid-template-rows: minmax(260px, 1fr) 3fr 64px;
+  grid-template-rows: minmax(140px, 260px) minmax(360px, 2fr);
   min-height: 1vh;
   min-width: 320px;
   font-family: "Open Sans", sans-serif;
 }
 
 .buttons {
-
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
+
 .button {
-
- &__save {
-
- }
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.5px;
+  color: $purple;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 8px 30px;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in;
+  &:hover {
+    transform: scale(1.1);
+  }
+  &__load {
+    color: $purple;
+    background-color: #ffffff;
+    border: 1px solid #121232;
+    margin-right: 16px;
+  }
+  &__save {
+    color: #ffffff;
+    background-color: $purple;
+    border: 1px solid #121232;
+  }
 }
 
 .editor {
-
 }
 
 .footer {
-  position: static;
+  position: absolute;
   bottom: 16px;
   left: 16px;
-
+  font-size: 12px;
 }
 
 .form {
@@ -43,45 +65,65 @@ body {
   &__input {
     min-width: 730px;
     min-height: 200px;
-
   }
   &__label {
     font-size: 10px;
     padding-top: 8px;
-
   }
 }
 
 .header {
   padding: 16px;
-  margin: auto;
+  margin: 0 auto;
   text-align: center;
 
+  &__logo {
+    height: 80px;
+    width: 80px;
+    transform: rotate(0.5turn);
+    &--fill {
+      fill: $purple;
+      transition: fill 0.5s ease-in;
+      transition: transform 0.5s ease-in;
+      &:hover {
+        fill: rgb(230, 198, 18);
+      }
+    }
+  }
+
   &__title {
-    
+    font-weight: 600;
+    font-size: 44px;
+    margin: 16px 0 0 0;
   }
   &__subtitle {
-
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 24px;
+    margin: 0;
   }
 }
-
 
 .icons {
   width: 24px;
   height: 24px;
   display: inline-flex;
+  transition: transform 0.2s ease-out;
+  transition: background-color 0.2s ease-out;
+  background-color: $ideator;
+  border-radius: 4px;
 
   &__bold {
-
+  }
+  &:hover {
+    transform: scale(1.1);
+    background-color: rgb(216, 203, 205);
   }
 
   &__italic {
-
+    &:hover {
+      transform: scale(1.1);
+      background-color: rgb(216, 203, 205);
+    }
   }
 }
-
-
-
-  
-
-
